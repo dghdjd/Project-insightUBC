@@ -1,0 +1,44 @@
+{
+	"title": "Invalid key abc in COLUMNS",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "adhe"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": 95
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_pass",
+				"courses_avg",
+				"courses_year"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"courses_year","courses_pass","courses_avg"
+				]
+			}
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"courses_dept":"adhe","courses_pass":33,"courses_avg":93.33,"courses_year":2016},{"courses_dept":"adhe","courses_pass":28,"courses_avg":91.29,"courses_year":2016},{"courses_dept":"cnps","courses_pass":4,"courses_avg":95,"courses_year":2016},{"courses_dept":"econ","courses_pass":3,"courses_avg":95,"courses_year":2016},{"courses_dept":"adhe","courses_pass":33,"courses_avg":90.82,"courses_year":2015},{"courses_dept":"adhe","courses_pass":31,"courses_avg":90.16,"courses_year":2015},{"courses_dept":"adhe","courses_pass":27,"courses_avg":96.11,"courses_year":2015},{"courses_dept":"adhe","courses_pass":26,"courses_avg":92.54,"courses_year":2015},{"courses_dept":"kin","courses_pass":5,"courses_avg":95,"courses_year":2015},{"courses_dept":"sowk","courses_pass":4,"courses_avg":95,"courses_year":2015},{"courses_dept":"crwr","courses_pass":1,"courses_avg":95,"courses_year":2015},{"courses_dept":"adhe","courses_pass":25,"courses_avg":90.72,"courses_year":2014},{"courses_dept":"kin","courses_pass":4,"courses_avg":95,"courses_year":2014},{"courses_dept":"bmeg","courses_pass":2,"courses_avg":95,"courses_year":2014},{"courses_dept":"crwr","courses_pass":2,"courses_avg":95,"courses_year":2014},{"courses_dept":"crwr","courses_pass":2,"courses_avg":95,"courses_year":2014},{"courses_dept":"cpsc","courses_pass":1,"courses_avg":95,"courses_year":2014},{"courses_dept":"edcp","courses_pass":19,"courses_avg":95,"courses_year":2013},{"courses_dept":"kin","courses_pass":7,"courses_avg":95,"courses_year":2013},{"courses_dept":"musc","courses_pass":7,"courses_avg":95,"courses_year":2013},{"courses_dept":"crwr","courses_pass":1,"courses_avg":95,"courses_year":2013},{"courses_dept":"crwr","courses_pass":1,"courses_avg":95,"courses_year":2013},{"courses_dept":"adhe","courses_pass":18,"courses_avg":91.33,"courses_year":2012},{"courses_dept":"adhe","courses_pass":18,"courses_avg":90.5,"courses_year":2012},{"courses_dept":"crwr","courses_pass":3,"courses_avg":95,"courses_year":2012},{"courses_dept":"adhe","courses_pass":29,"courses_avg":90.17,"courses_year":2011},{"courses_dept":"musc","courses_pass":4,"courses_avg":95,"courses_year":2011},{"courses_dept":"mtrl","courses_pass":1,"courses_avg":95,"courses_year":2011},{"courses_dept":"nurs","courses_pass":9,"courses_avg":95,"courses_year":2010},{"courses_dept":"psyc","courses_pass":8,"courses_avg":95,"courses_year":2010},{"courses_dept":"mtrl","courses_pass":6,"courses_avg":95,"courses_year":2010},{"courses_dept":"musc","courses_pass":4,"courses_avg":95,"courses_year":2010},{"courses_dept":"adhe","courses_pass":23,"courses_avg":91.48,"courses_year":2009},{"courses_dept":"epse","courses_pass":7,"courses_avg":95,"courses_year":2009},{"courses_dept":"rhsc","courses_pass":6,"courses_avg":95,"courses_year":2009},{"courses_dept":"math","courses_pass":6,"courses_avg":95,"courses_year":2008},{"courses_dept":"adhe","courses_pass":11,"courses_avg":90.18,"courses_year":2007},{"courses_dept":"epse","courses_pass":9,"courses_avg":95,"courses_year":2007},{"courses_dept":"adhe","courses_pass":62,"courses_avg":90.02,"courses_year":1900},{"courses_dept":"adhe","courses_pass":34,"courses_avg":90.85,"courses_year":1900},{"courses_dept":"edcp","courses_pass":19,"courses_avg":95,"courses_year":1900},{"courses_dept":"adhe","courses_pass":18,"courses_avg":91.33,"courses_year":1900},{"courses_dept":"epse","courses_pass":9,"courses_avg":95,"courses_year":1900},{"courses_dept":"nurs","courses_pass":9,"courses_avg":95,"courses_year":1900},{"courses_dept":"psyc","courses_pass":8,"courses_avg":95,"courses_year":1900},{"courses_dept":"musc","courses_pass":7,"courses_avg":95,"courses_year":1900},{"courses_dept":"math","courses_pass":6,"courses_avg":95,"courses_year":1900},{"courses_dept":"mtrl","courses_pass":6,"courses_avg":95,"courses_year":1900},{"courses_dept":"cnps","courses_pass":4,"courses_avg":95,"courses_year":1900},{"courses_dept":"musc","courses_pass":4,"courses_avg":95,"courses_year":1900},{"courses_dept":"musc","courses_pass":4,"courses_avg":95,"courses_year":1900},{"courses_dept":"crwr","courses_pass":3,"courses_avg":95,"courses_year":1900},{"courses_dept":"econ","courses_pass":3,"courses_avg":95,"courses_year":1900},{"courses_dept":"bmeg","courses_pass":2,"courses_avg":95,"courses_year":1900},{"courses_dept":"cpsc","courses_pass":1,"courses_avg":95,"courses_year":1900},{"courses_dept":"obst","courses_pass":1,"courses_avg":95,"courses_year":1900}]
+}

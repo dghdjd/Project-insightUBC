@@ -1,0 +1,28 @@
+{
+	"title": "a simple query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_title",
+				"overallAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_title"
+			],
+			"APPLY": [
+				{
+					"overallAvg": {
+						"MIN": "courses_avg"
+					}
+				}
+			]
+		}
+	},
+	"expected": [{"courses_title":"comptn, progrmng","overallAvg":67.79},{"courses_title":"model comptn","overallAvg":67.13},{"courses_title":"sftwr constructn","overallAvg":68.13},{"courses_title":"intro comp sys","overallAvg":64.62},{"courses_title":"basic alg&data","overallAvg":65.1},{"courses_title":"dta&alg elec eng","overallAvg":72.4},{"courses_title":"basics comp syst","overallAvg":67.91},{"courses_title":"comptng life sci","overallAvg":71},{"courses_title":"num comp alg prb","overallAvg":68.64},{"courses_title":"num approx/discr","overallAvg":68.35},{"courses_title":"intr rel databse","overallAvg":71.89},{"courses_title":"intr sftwr eng","overallAvg":72.27},{"courses_title":"programmng langs","overallAvg":72.83},{"courses_title":"func & logic prg","overallAvg":76.52},{"courses_title":"comp hard&os","overallAvg":70.46},{"courses_title":"comp graphics","overallAvg":67.85},{"courses_title":"internet comp","overallAvg":68.54},{"courses_title":"softwr eng proj","overallAvg":78.93},{"courses_title":"intr alg dsgn&an","overallAvg":66.34},{"courses_title":"artificial intel","overallAvg":67.48},{"courses_title":"machine lrn mine","overallAvg":68.4},{"courses_title":"hum-com interact","overallAvg":73.3},{"courses_title":"adv rel databse","overallAvg":68.76},{"courses_title":"adv software eng","overallAvg":74.04},{"courses_title":"compiler constrc","overallAvg":72.24},{"courses_title":"adv opertng sysm","overallAvg":68.79},{"courses_title":"distrbt'd systms","overallAvg":71.75},{"courses_title":"parallel comput","overallAvg":75.61},{"courses_title":"adv alg dsgn&anl","overallAvg":68.77},{"courses_title":"theory comptg","overallAvg":69.47},{"courses_title":"intel systems","overallAvg":66.13},{"courses_title":"computer vision","overallAvg":71.8},{"courses_title":"comptr & society","overallAvg":72.75},{"courses_title":"hmn-cp interactn","overallAvg":77.43},{"courses_title":"alg in bioin","overallAvg":73.18},{"courses_title":"honours thesis","overallAvg":83.08},{"courses_title":"student seminar","overallAvg":84.5},{"courses_title":"fund alg dsgn&an","overallAvg":78.87},{"courses_title":"thry of automata","overallAvg":83.8},{"courses_title":"artif intell 1","overallAvg":81.06},{"courses_title":"computl ling 1","overallAvg":79.25},{"courses_title":"software eng","overallAvg":82.5},{"courses_title":"prog lang princ","overallAvg":84.25},{"courses_title":"intgrt sys desgn","overallAvg":64},{"courses_title":"comput robotics","overallAvg":79.88},{"courses_title":"para algs & arch","overallAvg":82.65},{"courses_title":"artif intell 2","overallAvg":82.55},{"courses_title":"comp comm protcl","overallAvg":83.78},{"courses_title":"machine learn i","overallAvg":81.12},{"courses_title":"phy user intfc","overallAvg":82.07},{"courses_title":"hmn-cmpt intract","overallAvg":81.64},{"courses_title":"info visualizatn","overallAvg":88.47},{"courses_title":"m.sc major essay","overallAvg":75}]}

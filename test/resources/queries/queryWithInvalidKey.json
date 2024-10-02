@@ -1,0 +1,22 @@
+{
+  "title": "query with invalid key",
+  "input": {
+    "WHERE": {
+      "NOT": {
+        "LT": {
+          "coursesavg": 99.1
+        }
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

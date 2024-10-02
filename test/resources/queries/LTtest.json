@@ -1,0 +1,89 @@
+{
+	"title": "LT test",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"LT": {
+								"courses_avg": 75
+							}
+						},
+						{
+							"IS": {
+								"courses_dept": "cnps"
+							}
+						}
+					]
+				},
+				{
+					"EQ": {
+						"courses_avg": 97
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"expected": [
+		{
+			"courses_dept": "cnps",
+			"courses_id": "427",
+			"courses_avg": 70.66
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "365",
+			"courses_avg": 72.69
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "365",
+			"courses_avg": 72.83
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "433",
+			"courses_avg": 73.5
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "433",
+			"courses_avg": 73.5
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "365",
+			"courses_avg": 73.82
+		},
+		{
+			"courses_dept": "cnps",
+			"courses_id": "365",
+			"courses_avg": 74.35
+		},
+		{
+			"courses_dept": "crwr",
+			"courses_id": "599",
+			"courses_avg": 97
+		},
+		{
+			"courses_dept": "epse",
+			"courses_id": "534",
+			"courses_avg": 97
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "549",
+			"courses_avg": 97
+		}
+	]
+}
+

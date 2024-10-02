@@ -1,0 +1,94 @@
+/*
+// Open the building-and-classrooms folder to access building html files
+// let buildingAndClassroomsFolder = zipContent.folder(
+// "rooms/campus/discover/buildings-and-classrooms");
+// if (buildingAndClassroomsFolder === null) {
+// return reject(new InsightError("Could not open buildings-and-classrooms folder"));
+// }
+// buildingAndClassroomsFolder.forEach(function (path: string) {
+for (let path of Object.keys(mapShortName2Link)) {
+	let file = zipContent.file("rooms" + mapShortName2Link[path]);
+	if (file === null) {return reject(new InsightError("building file not found"));}
+	shortNames.push(path);
+	buildingFiles.push(file.async("string"));
+}
+// });
+		// Create a map from building shortname to its building html file
+		let mapShortNames2File: any = {};
+		// Open the building-and-classrooms folder to access building html files
+		let buildingAndClassroomsFolder = zipContent.folder(
+			"rooms/campus/discover/buildings-and-classrooms");
+		if (buildingAndClassroomsFolder === null) {
+			return reject(new InsightError("Could not open buildings-and-classrooms folder"));
+		}
+		buildingAndClassroomsFolder.forEach(async function (path: string) {
+			if (Object.keys(mapShortName2Addr).includes(path)) {
+				let file = zipContent.file("rooms" + mapShortName2Link[path]);
+				if (file === null) {
+					return reject(new InsightError("building file not found"));
+				}
+				mapShortNames2File[path] = await file.async("string");
+				//console.log("rooms" + mapShortName2Link[path]);
+				//console.log(path);
+			}
+		});
+		let allRoomSections: any[] = [];
+		console.log(mapShortNames2File);
+		Promise.all(mapShortNames2File).then((mapShortname2HTMLFiles: any) => {
+			console.log("success");
+			for (let shortName of Object.keys(mapShortName2Addr)) {
+				// First parse the building HTML file, and then get the tbody node
+				let buildingTbodyNode = getNode(parse(mapShortname2HTMLFiles[shortName]),
+					"tbody");
+				if (buildingTbodyNode !== false) {
+					allRoomSections = allRoomSections.concat(getRoomInfo(buildingTbodyNode,
+						shortName, mapShortName2Addr[shortName], mapShortName2FullName[shortName]));
+				}
+			}
+			return resolve(allRoomSections);
+
+		}).catch((error1) => {
+			return reject(new InsightError(error1));
+		});
+*/
+
+/*
+				// Open the building-and-classrooms folder to access building html files
+                let buildingAndClassroomsFolder = zipContent.folder(
+                	"rooms/campus/discover/buildings-and-classrooms");
+                if (buildingAndClassroomsFolder === null) {
+                	return reject(new InsightError("Could not open buildings-and-classrooms folder"));
+                }
+				let mapShortName2Link: {[key: string]: string} = {};
+				mapShortNameToAddrAndFullName(mapShortName2Addr, mapShortName2FullName, mapShortName2Link, tbodyNode);
+				// Create a map from building shortname to its building html file
+				let buildingFiles: any[] = [];
+				let shortNames: any[] = [];
+				for (let path of Object.keys(mapShortName2Link)) {
+					let file = zipContent.file("rooms" + mapShortName2Link[path]);
+					if (file === null) {
+						return reject(new InsightError("building file not found"));
+					}
+					shortNames.push(path);
+					buildingFiles.push(file.async("string"));
+				}
+				let allRoomSections: any[] = [];
+				Promise.all(buildingFiles)
+					.then((buildings: any[]) => {
+						for (let i in buildings) {
+							// First parse the building HTML file, and then get the tbody node
+							let buildingTbodyNode = getNode(parse(buildings[i]), "tbody");
+							if (buildingTbodyNode !== false) {
+								allRoomSections = allRoomSections.concat(
+									getRoomInfo(buildingTbodyNode, shortNames[i], mapShortName2Addr[shortNames[i]],
+										mapShortName2FullName[shortNames[i]]
+									)
+								);
+							}
+						}
+						return resolve(allRoomSections);
+					}).catch((error1) => {
+						return reject(new InsightError(error1));
+					});
+
+				 */

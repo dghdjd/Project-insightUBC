@@ -1,0 +1,122 @@
+<!-- Sources: https://www.youtube.com/watch?v=PgAZ8KzfhO8&ab_channel=EasyTutorials-->
+<!-- Sources: https://www.youtube.com/watch?v=v1PeTDrw6OY&ab_channel=DarkCode-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<title>310 Frontend</title>
+	<link href="/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="banner">
+	<div class="navbar">
+		<h1>UBC Explorer</h1>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="filter.html">Filter</a></li>
+			<li><a href="search.html">Search</a></li>
+		</ul>
+	</div>
+	<div class="filterContent">
+		<p>I want to filter:</p>
+		<div class="filterCheckbox">
+			<input type="checkbox" id="courses" />
+			<label for="courses">courses</label>
+			<input type="checkbox" id="rooms" />
+			<label for="rooms">rooms</label>
+		</div>
+		<div class="uploadFile">
+			<p>Upload file: <input type= "file" id= "fileToAdd" accept="application/x-zip-compressed" required></p>
+			<button id="addDatasetButton" class="button">Add dataset</button>
+		</div>
+		<div class="deleteDataset">
+			<button id="removeDataset" class="button">Remove dataset</button>
+		</div>
+<!--		<div>-->
+<!--			<div id="myData">Filter results will be displayed here:</div>-->
+<!--		</div>-->
+	</div>
+	<div class = "filter">
+		<div class="dept">
+			<p>Select course department:</p>
+			<label class="container">
+				<input type="checkbox" id="COGS" />
+				<label for="COGS">COGS</label>
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">
+				<input type="checkbox" id="CPSC" />
+				<label for="CPSC">CPSC</label>
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">
+				<input type="checkbox" id="MATH" />
+				<label for="MATH">MATH</label>
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">
+				<input type="checkbox" id="PHYS" />
+				<label for="PHYS">PHYS</label>
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">
+				<input type="checkbox" id="STAT" />
+				<label for="STAT">STAT</label>
+				<span class="checkmark"></span>
+			</label>
+			<label class = "moreCourses">
+				<button id="moreCourses" class="button">More courses</button>
+			</label>
+		</div>
+		<div class="column">
+			<p>Columns:</p>
+			<label class="container">Department
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">ID
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">Average
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label for="lowerThan">lower than</label>
+			<input type="text" id="lowerThan" name="input" placeholder="Enter a number" required>
+			<label for="lowerThan">higher than</label>
+			<input type="text" id="higherThan" name="input" placeholder="Enter a number" required>
+		</div>
+		<div class="order">
+			<p>Order by:</p>
+			<label class="container">Average
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">Department
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">Fail
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">ID
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container">Instructor
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+			<div class="ascending">
+				<input type="checkbox" id="ascending" />
+				<label for="ascending">Ascending</label>
+			</div>
+		</div>
+	</div>
+	<button id="submitCButtonForCourse" class="submitCButtonForCourse">View Results</button>
+</div>
+<script type="text/javascript" src="/filter.js"></script>
+</body>
+</html>

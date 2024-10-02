@@ -1,0 +1,321 @@
+/*<!-- Sources: https://www.youtube.com/watch?v=PgAZ8KzfhO8&ab_channel=EasyTutorials-->
+<!-- Sources: https://www.youtube.com/watch?v=v1PeTDrw6OY&ab_channel=DarkCode-->*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.banner{
+	width: 100%;
+	height: 110vh;
+	background-color: #EDF8FF;
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar h1{
+	font-size: 36px;
+	margin-top: 30px;
+	color: #5272EC;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #5272EC;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.content h1 {
+	font-size: 64px;
+	margin-top: 80px;
+	color: #5272EC;
+}
+.content p {
+	margin: 20px 20px;
+	font-weight: 80;
+	font-size: 20px;
+	color: #000000;
+}
+
+.filterContent {
+	width: 100%;
+	position: absolute;
+	top: 15%;
+	text-align: center;
+}
+
+.filterContent p {
+	margin-bottom: 8px;
+	font-size: 20px;
+	color: #5272EC;
+}
+
+
+.filterCheckbox {
+	width: 200px;
+	margin-left: 615px;
+	padding: 10px 10px;
+	text-align: center;
+	border-radius: 25px;
+	border: 2px solid #5272EC;
+	background: transparent;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.filterCheckbox span {
+	background: #5272EC;
+	height: 120%;
+	width: 120%;
+	border-radius: 25px;
+	position: absolute;
+	left: 80px;
+	bottom: 0;
+	z-index: -1;
+}
+
+.dept {
+	padding-left: 100px;
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: 10%;
+}
+
+.dept p{
+	margin: 12px 0;
+	border-left: 5px solid #5272EC;
+	padding-left: 26px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000000;
+}
+
+.container {
+	width: 20%;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #ffffff;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: #ffffff;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: #5272EC;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	left: 6px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.order {
+	margin-left: 100px;
+	transform: translateY(-20%);
+
+}
+
+.order p{
+	margin: 12px 0;
+	border-left: 5px solid #5272EC;
+	padding-left: 26px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000000;
+}
+
+
+.ascending {
+	padding: 4px 4px;
+	margin: 1px;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.column {
+	margin-left: 100px;
+	transform: translateY(-35%);
+}
+
+.column p{
+	margin: 12px 0;
+	border-left: 5px solid #5272EC;
+	padding-left: 26px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000000;
+}
+
+.submitCButtonForCourse {
+	margin-left: 100px;
+	transform: translateY(-80%);
+	background-color: #5272EC;
+	border: #5272EC;
+	color: #ffffff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 16px;
+}
+
+
+
+.uploadFile {
+	margin-left: 280px;
+	transform: translateY(10%);
+	background-color: #ffffff;
+	border: #5272EC;
+	color: #ffffff;
+	padding: 20px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 16px;
+}
+
+.uploadFile button {
+	margin-left: 350px;
+	transform: translateY(-100%);
+	background-color: #5272EC;
+	border: #5272EC;
+	color: #ffffff;
+	padding: 8px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 16px;
+}
+
+.deleteDataset button{
+	margin-left: 650px;
+	transform: translateY(-430%);
+	background-color: #ffffff;
+	border: #5272EC;
+	color: #5272EC;
+	padding: 8px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 16px;
+}
+
+.searchBar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+
+.searchBar p {
+	margin-bottom: 8px;
+	font-size: 20px;
+	color: #5272EC;
+}
+
+.searchBar button {
+	background-color: #5272EC;
+	border: #5272EC;
+	color: #ffffff;
+	padding: 8px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 16px;
+}
+
+
+

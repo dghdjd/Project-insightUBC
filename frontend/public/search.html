@@ -1,0 +1,47 @@
+<!-- Sources: https://www.youtube.com/watch?v=PgAZ8KzfhO8&ab_channel=EasyTutorials-->
+<!-- Sources: https://www.youtube.com/watch?v=v1PeTDrw6OY&ab_channel=DarkCode-->
+
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>310 Frontend</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="banner">
+			<div class="navbar">
+				<h1>UBC Explorer</h1>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="filter.html">Filter</a></li>
+					<li><a href="search.html">Search</a></li>
+				</ul>
+			</div>
+			<div class="filterContent">
+				<p>I want to search from:</p>
+				<div class="filterCheckbox">
+					<input type="checkbox" id="courses" />
+					<label for="courses">courses</label>
+					<input type="checkbox" id="rooms" />
+					<label for="rooms">rooms</label>
+				</div>
+				<div class="uploadFile">
+					<p>Upload file: <input type= "file" id= "fileToAdd" accept="application/x-zip-compressed" required></p>
+					<button id="addDatasetButton" class="button">Add dataset</button>
+				</div>
+				<div class="deleteDataset">
+					<button id="removeDataset" class="button">Remove dataset</button>
+				</div>
+			</div>
+			<div class="searchBar">
+				<p>Search here:
+					<label for="searchInput"></label>
+					<input type="text" id="searchInput" name="searchInput" placeholder="Enter name, id..." required>
+					<button id="searchButton" class="button">View results</button>
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="/search.js"></script>
+	</body>
+</html>
+
